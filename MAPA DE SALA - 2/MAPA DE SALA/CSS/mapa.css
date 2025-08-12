@@ -1,0 +1,220 @@
+body {
+    height: 100%;
+    font-weight: bold;
+    background-color: black;
+}
+
+/* Contêiner do vídeo */
+.video-background {
+position: absolute; /* Mantém o vídeo fixo no fundo */
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+overflow: hidden;
+z-index: -1; /* Garante que o vídeo fique atrás do conteúdo */
+}
+
+/* Ajustando o vídeo */
+.video-background video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Garante que o vídeo cubra toda a tela */
+}
+
+.div-button {
+    position: absolute;
+    top: 0;
+    left: 750px;
+}
+
+.button2 {
+    width: 200px;
+    height: 50px;
+    padding: 10px;
+    background-color: #1E90FF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.button2:hover {
+    background-color: #8A2BE2;
+}
+
+.button2.active {
+    background-color: #8A2BE2;
+    color: white;
+}
+
+#senac{
+    position: absolute;
+    top: 20px;
+    left: 160px;
+}
+
+#disponibilidade {
+    position: absolute;
+    top: 300px;
+    left: -20px;
+    max-width: 400px;
+}
+
+.p-salas {
+    margin-bottom: 10px;
+    font-family: arial;
+    color: white;
+}
+
+.div-grande {
+    position: absolute;
+    top: 105px;
+    left: 58%;
+    transform: translateX(-50%);
+    width: 1250px;
+    height: 500px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    align-items: center;
+    padding: 10px;
+}
+
+.salas {
+    width: 280px;
+    height: 130px;
+    background-color:#8A2BE2 ;
+    border: 1px solid #1E90FF;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    padding: 10px;
+    cursor: pointer;
+    position: relative;
+}
+
+.salas:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.pontos {
+    right: 10px;
+    width: 25px;
+    height: 25px;
+    max-width: 200px;
+    position: absolute;
+    top: 10px;
+    transition: transform 0.5s ease;
+}
+
+.pontos:hover {
+    transform: scale(1.2);
+}
+
+.mais-informaçoes {
+    display: none;
+    position: absolute;
+    right: 0;
+    height: 100%;
+    width: 60px;
+    background-color: transparent;
+    border-left: 1px solid black;
+    border-bottom-right-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.button-reset {
+    border-top-right-radius: 10px;
+    width: 100%;
+    height: 30px;
+    border: none;
+    border-bottom: 1px solid black;
+}
+
+.button-inative{
+    width: 100%;
+    height: 30px;
+    border: none;
+    border-bottom: 1px solid black;
+}
+
+.button-fechar{
+    width: 100%;
+    height: 25px;
+    position: absolute;
+    bottom: 20px;
+    left: 0px;
+    border: none;
+    border-bottom: 1px solid black;
+    border-top: 1px solid black;
+    cursor: alias;
+}
+
+.info-sala {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border: 2px solid #004587;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    width: 300px;
+    text-align: center;
+}
+
+.info-sala h2 {
+    color: #004587;
+    font-family: arial;
+}
+
+.info-sala p {
+    color: #004587;
+}
+
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+
+.input-field {
+    margin: 10px 0;
+    width: 100%;
+    font-size: 14px;
+    color: #004587;
+}
+
+.button {
+    padding: 10px;
+    background-color: #1E90FF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #8A2BE2;
+}

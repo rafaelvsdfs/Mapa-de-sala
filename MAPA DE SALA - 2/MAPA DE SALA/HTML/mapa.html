@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Salas</title>
+    <link rel="stylesheet" href="../CSS/mapa.css">
+</head>
+<body>
+
+    <!-- Vídeo de fundo -->
+    <div class="video-background">
+        <video autoplay loop muted>
+            <source src="../assets/fundo.mp4" type="video/mp4"> 
+        </video>
+    </div>
+
+    <div class="div-button">
+        <button id="btn-todas" class="button2 active" onclick="filtrarSalas('todas')">Todas as salas</button>
+        <button id="btn-disponiveis" class="button2" onclick="filtrarSalas('disponiveis')">Salas disponíveis</button>
+        <button id="btn-ocupadas" class="button2" onclick="filtrarSalas('ocupadas')">Salas ocupadas</button>
+    </div>
+    
+    <div class="div-grande">
+        <!-- Sala 1 -->
+        <div class="salas" id="sala-1" onclick="abrirInfoSala(1, event)">
+            <p class="p-salas">Sala: 1</p>
+            <p class="p-salas" id="professor-1">Professor: Não informado</p>
+            <p class="p-salas" id="data-1">Data Início: Não informada<br>Data Final: Não informada</p>
+            <a onclick="AbrirPontos(1, event)">
+                <img class="pontos" src="../assets/pontos2.png" alt="">
+            </a>
+            <div class="mais-informaçoes" id="pontosinformaçoes-1">
+                <button class="button-reset" onclick="resetarSala(1)"> Resetar</button>
+                <button class="button-inative" onclick="inativeSala(1)"> inativa </button>
+                <button class="button-fechar"onclick="FecharPontos(1)"> Fechar </button>
+            </div>
+        </div>
+    
+        <!-- Sala 2 -->
+        <div class="salas" id="sala-2" onclick="abrirInfoSala(2, event)">
+            <p class="p-salas">Sala: 2</p>
+            <p class="p-salas" id="professor-2">Professor: Não informado</p>
+            <p class="p-salas" id="data-2">Data Início: Não informada<br>Data Final: Não informada</p>
+            <a onclick="AbrirPontos(2, event)">
+                <img class="pontos" src="../assets/pontos2.png" alt="">
+            </a>
+            <div class="mais-informaçoes" id="pontosinformaçoes-2">
+                <button class="button-reset" onclick="resetarSala(2)"> Resetar</button>
+                <button class="button-inative" onclick="inativeSala(2)"> inativa </button>
+                <button class="button-fechar"onclick="FecharPontos(2)"> Fechar </button>
+            </div>
+        </div>
+    
+        <!-- Sala 3 -->
+        <div class="salas" id="sala-3" onclick="abrirInfoSala(3, event)">
+            <p class="p-salas">Sala: 3</p>
+            <p class="p-salas" id="professor-3">Professor: Não informado</p>
+            <p class="p-salas" id="data-3">Data Início: Não informada<br>Data Final: Não informada</p>
+            <a onclick="AbrirPontos(3, event)">
+                <img class="pontos" src="../assets/pontos2.png" alt="">
+            </a>
+            <div class="mais-informaçoes" id="pontosinformaçoes-3">
+                <button class="button-reset" onclick="resetarSala(3)"> Resetar</button>
+                <button class="button-inative" onclick="inativeSala(3)"> inativa </button>
+                <button class="button-fechar"onclick="FecharPontos(3)"> Fechar </button>
+            </div>
+        </div>
+    
+        <!-- Sala 4 -->
+        <div class="salas" id="sala-4" onclick="abrirInfoSala(4, event)">
+            <p class="p-salas">Sala: 4</p>
+            <p class="p-salas" id="professor-4">Professor: Não informado</p>
+            <p class="p-salas" id="data-4">Data Início: Não informada<br>Data Final: Não informada</p>
+            <a onclick="AbrirPontos(4, event)">
+                <img class="pontos" src="../assets/pontos2.png" alt="">
+            </a>
+            <div class="mais-informaçoes" id="pontosinformaçoes-4">
+                <button class="button-reset" onclick="resetarSala(4)"> Resetar</button>
+                <button class="button-inative" onclick="inativeSala(4)"> inativa </button>
+                <button class="button-fechar"onclick="FecharPontos(4)"> Fechar </button>
+            </div>
+        </div>
+    
+        <!-- Sala 5 -->
+        <div class="salas" id="sala-5" onclick="abrirInfoSala(5, event)">
+            <p class="p-salas">Sala: 5</p>
+            <p class="p-salas" id="professor-5">Professor: Não informado</p>
+            <p class="p-salas" id="data-5">Data Início: Não informada<br>Data Final: Não informada</p>
+            <a onclick="AbrirPontos(5, event)">
+                <img class="pontos" src="../assets/pontos2.png" alt="">
+            </a>
+            <div class="mais-informaçoes" id="pontosinformaçoes-5">
+                <button class="button-reset" onclick="resetarSala(5)"> Resetar</button>
+                <button class="button-inative" onclick="inativeSala(5)"> inativa </button>
+                <button class="button-fechar"onclick="FecharPontos(5)"> Fechar </button>
+            </div>
+        </div>
+    
+        <!-- Sala 6 -->
+        <div class="salas" id="sala-6" onclick="abrirInfoSala(6, event)">
+            <p class="p-salas">Sala: 6</p>
+            <p class="p-salas" id="professor-6">Professor: Não informado</p>
+            <p class="p-salas" id="data-6">Data Início: Não informada<br>Data Final: Não informada</p>
+            <a onclick="AbrirPontos(6, event)">
+                <img class="pontos" src="../assets/pontos2.png" alt="">
+            </a>
+            <div class="mais-informaçoes" id="pontosinformaçoes-6">
+                <button class="button-reset" onclick="resetarSala(6)"> Resetar</button>
+                <button class="button-inative" onclick="inativeSala(6)"> inativa </button>
+                <button class="button-fechar"onclick="FecharPontos(6)"> Fechar </button>
+            </div>
+        </div>
+    
+        <!-- Sala 7 -->
+        <div class="salas" id="sala-7" onclick="abrirInfoSala(7, event)">
+            <p class="p-salas">Sala: 7</p>
+            <p class="p-salas" id="professor-7">Professor: Não informado</p>
+            <p class="p-salas" id="data-7">Data Início: Não informada<br>Data Final: Não informada</p>
+            <a onclick="AbrirPontos(7, event)">
+                <img class="pontos" src="../assets/pontos2.png" alt="">
+            </a>
+            <div class="mais-informaçoes" id="pontosinformaçoes-7">
+                <button class="button-reset" onclick="resetarSala(7)"> Resetar</button>
+                <button class="button-inative" onclick="inativeSala(7)"> inativa </button>
+                <button class="button-fechar"onclick="FecharPontos(7)"> Fechar </button>
+            </div>
+        </div>
+    
+        <!-- Sala 8 -->
+        <div class="salas" id="sala-8" onclick="abrirInfoSala(8, event)">
+            <p class="p-salas">Sala: 8</p>
+            <p class="p-salas" id="professor-8">Professor: Não informado</p>
+            <p class="p-salas" id="data-8">Data Início: Não informada<br>Data Final: Não informada</p>
+            <a onclick="AbrirPontos(8, event)">
+                <img class="pontos" src="../assets/pontos2.png" alt="">
+            </a>
+            <div class="mais-informaçoes" id="pontosinformaçoes-8">
+                <button class="button-reset" onclick="resetarSala(8)"> Resetar</button>
+                <button class="button-inative" onclick="inativeSala(8)"> inativa </button>
+                <button class="button-fechar"onclick="FecharPontos(8)"> Fechar </button>
+            </div>
+        </div>
+    
+        <!-- Sala 9 -->
+        <div class="salas" id="sala-9" onclick="abrirInfoSala(9, event)">
+            <p class="p-salas">Sala: 9</p>
+            <p class="p-salas" id="professor-9">Professor: Não informado</p>
+            <p class="p-salas" id="data-9">Data Início: Não informada<br>Data Final: Não informada</p>
+            <a onclick="AbrirPontos(9, event)">
+                <img class="pontos" src="../assets/pontos2.png" alt="">
+            </a>
+            <div class="mais-informaçoes" id="pontosinformaçoes-9">
+                <button class="button-reset" onclick="resetarSala(9)"> Resetar</button>
+                <button class="button-inative" onclick="inativeSala(9)"> inativa </button>
+                <button class="button-fechar"onclick="FecharPontos(9)"> Fechar </button>
+            </div>
+        </div>
+    
+        <!-- Sala 10 -->
+        <div class="salas" id="sala-10" onclick="abrirInfoSala(10, event)">
+            <p class="p-salas">Sala: 10</p>
+            <p class="p-salas" id="professor-10">Professor: Não informado</p>
+            <p class="p-salas" id="data-10">Data Início: Não informada<br>Data Final: Não informada</p>
+            <a onclick="AbrirPontos(10, event)">
+                <img class="pontos" src="../assets/pontos2.png" alt="">
+            </a>
+            <div class="mais-informaçoes" id="pontosinformaçoes-10">
+                <button class="button-reset" onclick="resetarSala(10)"> Resetar</button>
+                <button class="button-inative" onclick="inativeSala(10)"> inativa </button>
+                <button class="button-fechar"onclick="FecharPontos(10)"> Fechar </button>
+            </div>
+        </div>
+    
+        <!-- Sala 11 -->
+        <div class="salas" id="sala-11" onclick="abrirInfoSala(11, event)">
+            <p class="p-salas">Sala: 11</p>
+            <p class="p-salas" id="professor-11">Professor: Não informado</p>
+            <p class="p-salas" id="data-11">Data Início: Não informada<br>Data Final: Não informada</p>
+            <a onclick="AbrirPontos(11, event)">
+                <img class="pontos" src="../assets/pontos2.png" alt="">
+            </a>
+            <div class="mais-informaçoes" id="pontosinformaçoes-11">
+                <button class="button-reset" onclick="resetarSala(11)"> Resetar</button>
+                <button class="button-inative" onclick="inativeSala(11)"> inativa </button>
+                <button class="button-fechar"onclick="FecharPontos(11)"> Fechar </button>
+            </div>
+        </div>
+    
+        <!-- Sala 12 -->
+        <div class="salas" id="sala-12" onclick="abrirInfoSala(12, event)">
+            <p class="p-salas">Sala: 12</p>
+            <p class="p-salas" id="professor-12">Professor: Não informado</p>
+            <p class="p-salas" id="data-12">Data Início: Não informada<br>Data Final: Não informada</p>
+            <a onclick="AbrirPontos(12, event)">
+                <img class="pontos" src="../assets/pontos2.png" alt="">
+            </a>
+            <div class="mais-informaçoes" id="pontosinformaçoes-12">
+                <button class="button-reset" onclick="resetarSala(12)"> Resetar</button>
+                <button class="button-inative" onclick="inativeSala(12)"> inativa </button>
+                <button class="button-fechar"onclick="FecharPontos(12)"> Fechar </button>
+            </div>
+        </div>
+    </div>
+    
+
+        <!-- Adicionar mais salas conforme necessário -->
+    </div>
+
+    <img src="../assets/disponivel.png" id="disponibilidade">
+
+
+    <!-- Div com informações -->
+    <div class="overlay" id="overlay" onclick="fecharInfoSala(event)"></div>
+    <div class="info-sala" id="info-sala">
+        <h2>Informações da Sala</h2>
+        <input type="text" class="input-field" id="input-professor" placeholder="Nome do professor">
+        <input type="date" class="input-field" id="input-data-inicio" placeholder="Data Início">
+        <input type="date" class="input-field" id="input-data-final" placeholder="Data Final">
+        <button class="button" onclick="salvarInformacoes()">Salvar</button>
+        <button class="button" onclick="fecharInfoSala(event)">Fechar</button>
+    </div>
+
+    <script src="../JAVA SCRIPT/mapa.js"> </script>
+</body>
+</html>
